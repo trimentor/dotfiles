@@ -1,0 +1,12 @@
+.rvmrc
+.bundle
+.idea/
+.sass-cache/
+*.sw*
+db/*.sqlite3
+log/*.log
+rerun.txt
+tags
+tmp/**/*
+!tmp/cache/.keep
+public/assets/*
