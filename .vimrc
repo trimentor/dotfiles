@@ -28,6 +28,18 @@ set grepprg=ack-grep " Use Ack when calling :grep
 " Remove hl search when pressing Enter
 nnoremap <CR> :nohlsearch<CR>
 
+" Easier split navigations
+" E.g. Ctrl-j instead of Ctrl-w + j
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+
 set colorcolumn=80 " Show vertical line on column 80
 
 " Set colors
@@ -92,3 +104,4 @@ imap <c-l> <space>=><space>
 
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
+
