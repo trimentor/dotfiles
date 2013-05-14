@@ -65,6 +65,7 @@ Bundle 'gmarik/vundle'
 " Original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
+Bundle 'kchmck/vim-coffee-script'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
