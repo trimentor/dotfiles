@@ -46,8 +46,6 @@ set colorcolumn=80 " Show vertical line on column 80
 set t_Co=256
 colorscheme wombat256
 
-execute pathogen#infect()
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -55,6 +53,18 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 else
   syntax enable
 end
+
+" Configure Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Original repos on GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
