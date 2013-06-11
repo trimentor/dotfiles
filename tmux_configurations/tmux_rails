@@ -1,0 +1,26 @@
+name=
+project_dir=
+
+tmux has-session -t ${name}
+if [ $? != 0 ]
+then
+  tmux new-session -s ${name} -n editor -d
+
+  tmux split-window -v -p 25 -t ${name} 
+  tmux new-window -n console -t ${name}
+  tmux split-window -v -p 50 -t ${name}
+  tmux split-window -h -p 50 -t ${name}:2.1
+  tmux new-window -n git -t ${name}
+  tmux split-window -v -p 25 -t ${name}
+  tmux new-window -n logs -t ${name}
+
+  tmux send-keys -t ${name}:1.1 "cd ${project_dir} && clear && vim ." C-m
+  tmux send-keys -t ${name}:2.1 "cd ${project_dir} && clear && zeus start" C-m
+  tmux send-keys -t ${name}:2.3 "cd ${project_dir} && clear && sleep 10 && zeus server" C-m
+  tmux send-keys -t ${name}:2.2 "cd ${project_dir} && clear && zeus console" C-m
+  tmux send-keys -t ${name}:3.1 "cd ${project_dir} && clear && tig" C-m
+  tmux send-keys -t ${name}:3.2 "cd ${project_dir} && clear && git status" C-m
+  tmux send-keys -t ${name}:4.1 "cd ${project_dir} && clear && tail -f log/development.log" C-m
+
+  tmux attach -t ${name}
+fi
