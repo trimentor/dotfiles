@@ -66,6 +66,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -110,8 +111,9 @@ map Q gq
 " Ctrl+l to write '=>'
 imap <c-l> <space>=><space>
 
-" Mapping for Exuberant Ctags
-:nnoremap <f5> :!ctags -R --exclude=log --exclude=coverage --exclude=.git -h 'rb.js.coffee.scss.sass.css.html.haml.yml.erb'<CR>
+" Ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
