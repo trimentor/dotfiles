@@ -39,8 +39,7 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-
-set colorcolumn=80 " Show vertical line on column 80
+execute "set colorcolumn=" . join(range(81,999), ',')
 
 " Set colors
 set t_Co=256
