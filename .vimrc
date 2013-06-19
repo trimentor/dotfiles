@@ -65,6 +65,7 @@ Bundle 'gmarik/vundle'
 " Original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 
