@@ -67,6 +67,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
