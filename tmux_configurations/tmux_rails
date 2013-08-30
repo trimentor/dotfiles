@@ -14,13 +14,15 @@ then
   tmux split-window -v -p 25 -t ${name}
   tmux new-window -n logs -t ${name}
 
-  tmux send-keys -t ${name}:1.1 "cd ${project_dir} && clear && vim ." C-m
+  tmux send-keys -t ${name}:1.1 "cd ${project_dir} && clear && vim" C-m
   tmux send-keys -t ${name}:2.1 "cd ${project_dir} && clear && zeus start" C-m
   tmux send-keys -t ${name}:2.3 "cd ${project_dir} && clear && sleep 10 && zeus server" C-m
   tmux send-keys -t ${name}:2.2 "cd ${project_dir} && clear && sleep 10 && zeus console" C-m
   tmux send-keys -t ${name}:3.1 "cd ${project_dir} && clear && tig" C-m
   tmux send-keys -t ${name}:3.2 "cd ${project_dir} && clear && git status" C-m
   tmux send-keys -t ${name}:4.1 "cd ${project_dir} && clear && tail -f log/development.log" C-m
+
+  tmux select-window -t ${name}:1
 
   tmux attach -t ${name}
 fi
