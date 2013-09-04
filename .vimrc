@@ -79,6 +79,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
