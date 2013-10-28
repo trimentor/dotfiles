@@ -44,8 +44,6 @@ noremap <Right> <NOP>
 set splitbelow
 set splitright
 
-execute "set colorcolumn=" . join(range(81,999), ',')
-
 " Set colors
 set t_Co=256
 colorscheme wombat256
