@@ -46,7 +46,7 @@ set splitright
 
 " Set colors
 set t_Co=256
-colorscheme wombat256
+colors wombat256mod
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern
@@ -65,7 +65,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Original repos on GitHub
-Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
@@ -73,8 +72,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'scrooloose/nerdtree'
-Bundle 'airblade/vim-gitgutter'
+" Version Control
+Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
+Bundle 'airblade/vim-gitgutter'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
