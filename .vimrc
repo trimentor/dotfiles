@@ -122,6 +122,9 @@ map Q gq
 " Ctrl+l to write '=>'
 imap <c-l> <space>=><space>
 
+" Ctrl+b to jump to the next line and write 'binding.pry'
+noremap <c-b> obinding.pry<ESC>:w<CR>
+
 " Ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
