@@ -1,6 +1,8 @@
 set nocompatible   " Use VIM settings, rather than VI settings
 set encoding=utf-8 " Set VIM file encoding detection
 
+set re=1           " Use old Regular Expression Engine for faster navigation in Ruby files
+
 set expandtab      " Use spaces, rather than tabs
 set tabstop=2      " One tab equals two spaces
 set shiftwidth=2   " Controls how many columns text is indented with >> and <<
