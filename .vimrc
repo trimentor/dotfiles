@@ -69,6 +69,9 @@ Bundle 'gmarik/vundle'
 " Original repos on GitHub
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rbenv'
+Bundle 'tpope/rbenv-ctags'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -132,3 +135,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
 
+" Use ctags for jumping to source code
+set tags=./tags,tags
+nnoremap <f5> :!ctags -R<CR>
+noremap <c-b> g<c-]>
+autocmd BufWritePost * call system("ctags -R")
