@@ -18,6 +18,9 @@
 [merge]
   log = true
 
+[commit]
+  template = ~/.gitmessage
+
 [alias]
   aa = add --all
   ap = add --patch
