@@ -27,6 +27,7 @@
   cot = checkout --track
   cm = checkout master
   cb = checkout -b
+  br = branch
   bra = branch -a
   rbr = branch -D
   brr = branch -r
