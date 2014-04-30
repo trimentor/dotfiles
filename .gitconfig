@@ -24,6 +24,7 @@
   ca = commit --amend
   ci = commit -v
   co = checkout
+  cot = checkout --track
   cm = checkout master
   cb = checkout -b
   bra = branch -a
