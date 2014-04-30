@@ -9,6 +9,7 @@ set shiftwidth=2   " Controls how many columns text is indented with >> and <<
 
 set history=50     " Keep 50 lines of command line history
 set ruler          " Show the cursor position all the time
+set autowrite      " Automatically :write before running commands
 set showcmd        " Display incomplete commands
 set showmode       " Show the mode you're in
 set scrolloff=3    " Show three lines before and after the cursor
