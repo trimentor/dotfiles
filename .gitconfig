@@ -43,7 +43,7 @@
   lg = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   count = shortlog -sn
   up = pull --rebase
-  st = status
+  st = status -sb
   rh = reset HEAD
   rhh = reset HEAD --hard
   rhs = reset HEAD --soft
