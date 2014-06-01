@@ -25,6 +25,7 @@
   aa = add --all
   ap = add --patch
   ca = commit --amend
+  ac = !git add . -A && git commit
   ci = commit -v
   co = checkout
   cot = checkout --track
