@@ -28,6 +28,8 @@ set ignorecase     " Enable case insensitive search..
 set smartcase      " ..unless keywords contain at least one capital letter
 set grepprg=ack-grep " Use Ack when calling :grep
 
+let mapleader=","
+
 " Remove hl search when pressing Enter
 nnoremap <CR> :nohlsearch<CR>
 
