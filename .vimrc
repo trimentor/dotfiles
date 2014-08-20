@@ -59,27 +59,29 @@ end
 
 " Configure Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Original repos on GitHub
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rbenv'
-Bundle 'tpope/rbenv-ctags'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rbenv'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/rbenv-ctags'
+Plugin 'jtratner/vim-flavored-markdown'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
 " Version Control
-Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
