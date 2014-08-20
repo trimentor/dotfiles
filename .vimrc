@@ -76,6 +76,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
+Plugin 'thoughtbot/vim-rspec'
 " Version Control
 Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
@@ -113,6 +114,14 @@ augroup END
 
 " Use Q for formatting, rather than Ex moode
 map Q gq
+
+" RSpec mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 " Ctrl+l to write '=>'
 imap <c-l> <space>=><space>
