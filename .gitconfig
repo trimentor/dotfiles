@@ -2,6 +2,9 @@
   name = Kjel Delaey
   email = ""
 
+[pull]
+  rebase = preserve
+
 [push]
   default = upstream
 
