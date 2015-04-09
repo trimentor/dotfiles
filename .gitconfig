@@ -45,7 +45,7 @@
   rebase-origin = !git fetch origin && git rebase origin/master
   lg = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   count = shortlog -sn
-  up = pull --rebase
+  up = !git fetch && git pull && git fetch --tags
   st = status -sb
   rh = reset HEAD
   rhh = reset HEAD --hard
