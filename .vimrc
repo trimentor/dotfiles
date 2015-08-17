@@ -14,6 +14,10 @@ set showcmd        " Display incomplete commands
 set showmode       " Show the mode you're in
 set scrolloff=3    " Show three lines before and after the cursor
 
+set laststatus=2   " Show the status line all the time
+" Useful status information at bottom of screen
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
 set backspace=indent,eol,start " Backspace through everything in insert mode
 
 set nowrap         " Don't display lines continues on the next line when they don't fit on the screen
@@ -27,8 +31,6 @@ set incsearch      " Enable incremental searching
 set ignorecase     " Enable case insensitive search..
 set smartcase      " ..unless keywords contain at least one capital letter
 set grepprg=ack-grep " Use Ack when calling :grep
-
-let mapleader=","
 
 " Remove hl search when pressing Enter
 nnoremap <CR> :nohlsearch<CR>
@@ -114,6 +116,8 @@ augroup END
 
 " Use Q for formatting, rather than Ex moode
 map Q gq
+
+let mapleader=","
 
 " RSpec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
