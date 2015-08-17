@@ -144,4 +144,5 @@ autocmd BufWritePost * call system("ctags -R")
 
 " Set colors
 set t_Co=256
-colors wombat256mod
+set background=dark
+colors PaperColor
