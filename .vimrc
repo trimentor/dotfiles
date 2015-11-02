@@ -79,6 +79,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'bogado/file-line'
 " Version Control
 Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
