@@ -148,6 +148,9 @@ map <Leader>gd :Gdiff<CR>
 map <Leader>gl :Glog<CR>
 map <Leader>gc :Gcommit<CR>
 
+" (Re)open NERDTree or close it
+map <Leader>n :NERDTreeToggle<CR>
+
 " Use ctags for jumping to source code
 set tags=./tags,tags
 nnoremap <f5> :!ctags -R<CR>
