@@ -2,6 +2,8 @@ alias v='vim'
 
 alias log='tail -f'
 
+alias ls5='ls -1t | head -5'
+
 # Bundler
 alias b='bundle'
 alias bi='b install'
