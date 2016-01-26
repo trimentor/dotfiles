@@ -141,6 +141,13 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
 
+" Git support (Fugitive)
+map <Leader>gb :Gblame<CR>
+map <Leader>gs :Gstatus<CR>
+map <Leader>gd :Gdiff<CR>
+map <Leader>gl :Glog<CR>
+map <Leader>gc :Gcommit<CR>
+
 " Use ctags for jumping to source code
 set tags=./tags,tags
 nnoremap <f5> :!ctags -R<CR>
