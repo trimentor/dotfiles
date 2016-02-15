@@ -136,7 +136,9 @@ noremap <c-d> obinding.pry<ESC>:w<CR>
 
 " Ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)\tags\tmp$'
+let g:ctrlp_max_files = 5000
 
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
