@@ -80,6 +80,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'bogado/file-line'
+Plugin 'tpope/vim-unimpaired'
 " Version Control
 Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
