@@ -79,6 +79,10 @@ noremap <Right> <NOP>
 noremap <Leader>vh :vert help<space>
 " }}}
 
+" Sudo write (,W) {{{
+noremap <leader>W :w !sudo tee %<CR>
+" }}}
+
 " Plugins {{{
 " Configure Vundle
 filetype off
