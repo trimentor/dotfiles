@@ -20,7 +20,7 @@ export PATH=/home/user/tmux_configurations/:$PATH
 ```
 
 ```
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 ```
