@@ -1,3 +1,4 @@
+" Settings {{{
 set nocompatible   " Use VIM settings, rather than VI settings
 set encoding=utf-8 " Set VIM file encoding detection
 
@@ -32,33 +33,49 @@ set ignorecase     " Enable case insensitive search..
 set smartcase      " ..unless keywords contain at least one capital letter
 set grepprg=ack-grep " Use Ack when calling :grep
 
-" Remove hl search when pressing Enter
-nnoremap <CR> :nohlsearch<CR>
-
-" Easier split navigations
-" E.g. Ctrl-j instead of Ctrl-w + j
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+set foldmethod=marker " Fold block of text surrounded by {{{ and }}}
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+" }}}
+
+" Syntax highlighting {{{
+colors onedark " https://github.com/joshdick/onedark.vim
+set t_Co=256
 
 " Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 else
   syntax enable
 end
+" }}}
 
+" Search highlighting {{{
+" Remove search highlighting when pressing ENTER
+nnoremap <CR> :nohlsearch<CR>
+" }}}
+
+" Mapleader {{{
+let mapleader=","
+" }}}
+
+" Easier split navigations {{{
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+" }}}
+
+" Disable arrow navigtion {{{
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+" }}}
+
+" Plugins {{{
 " Configure Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -87,55 +104,25 @@ Plugin 'gregsexton/gitv'
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
+" }}}
 
-" Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
-" Also load indent files, to automatically do language-dependent indenting
-filetype plugin indent on
-
-" Set File type to 'text' for files ending in .txt
-autocmd BufNewFile,BufRead *.txt setfiletype text
-
-" Enable soft-wrapping for text files
-autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
-
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-au!
-
-" When editing a file, always jump to the last known cursor position.
-" Don't do it for commit messages, when the position is invalid, or when
-" inside an event handler (happens when dropping a file on gvim).
-autocmd BufReadPost *
-  \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal g`\"" |
-  \ endif
-
-" Automatically load .vimrc source when saved
-autocmd BufWritePost .vimrc source $MYVIMRC
-augroup END
-
-" Use Q for formatting, rather than Ex moode
-map Q gq
-
-let mapleader=","
-
-" RSpec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-let g:rspec_command = "!bundle exec rspec {spec}"
-
+" Ruby {{{
 " Ctrl+l to write '=>'
 imap <c-l> <space>=><space>
 
 " Ctrl+d to jump to the next line and write 'binding.pry'
 noremap <c-d> obinding.pry<ESC>:w<CR>
+" }}}
 
-" Ctrlp
+" RSpec {{{
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR> 
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = "!bundle exec rspec {spec}"
+" }}}
+
+" CtrlP {{{
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)\tags\tmp$'
@@ -143,24 +130,17 @@ let g:ctrlp_max_files = 5000
 
 " Search buffer
 map <Leader>pb :CtrlPBuffer<CR>
+" }}}
 
-" Git support (Fugitive)
+" Git support (Fugitive) {{{
 map <Leader>gb :Gblame<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gl :Glog<CR>
 map <Leader>gc :Gcommit<CR>
+" }}}
 
+" Filesystem navigation {{{
 " (Re)open NERDTree or close it
 map <Leader>n :NERDTreeToggle<CR>
-
-" Use ctags for jumping to source code
-set tags=./tags,tags
-nnoremap <f5> :!ctags -R<CR>
-noremap <c-b> g<c-]>
-autocmd BufWritePost * call system("ctags -R")
-
-" Set colors
-set t_Co=256
-set background=dark
-colors PaperColor
+" }}}
