@@ -75,6 +75,10 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 " }}}
 
+" Help {{{
+noremap <Leader>vh :vert help<space>
+" }}}
+
 " Plugins {{{
 " Configure Vundle
 filetype off
