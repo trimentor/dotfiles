@@ -1,0 +1,4 @@
+if [ -L ~/.aliases ]; then
+    . ~/.aliases
+fi
+
