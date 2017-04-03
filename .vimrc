@@ -112,6 +112,7 @@ Plugin 'gregsexton/gitv'
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
+filetype plugin indent on
 " }}}
 
 " Ruby {{{
