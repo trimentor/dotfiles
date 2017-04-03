@@ -10,3 +10,4 @@ A set of configuration files
 0. Run `~/dotfiles/scripts/compile-vim.sh`
 0. Run `~/dotfiles/scripts/setup-vim.sh`
 0. Run `~/dotfiles/scripts/setup-aliases.sh`
+0. Run `~/dotfiles/scripts/setup-git.sh`
