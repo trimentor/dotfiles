@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# https://en.wikipedia.org/wiki/ANSI_escape_code
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NO_COLOR='\033[0m'
+
+if [ ! -d ~/.vim ]; then
+  printf "${RED}Creating vim directory..${NO_COLOR}\n"
+  mkdir ~/.vim
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
+if [ ! -L ~/.vimrc ]; then
+  printf "${RED}Linking vim configuration file..${NO_COLOR}\n"
+  ln -s ~/dotfiles/.vimrc ~/.vimrc
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
+
+if [ ! -d ~/.vim/bundle ]; then
+  printf "${RED}Creating plugin directory..${NO_COLOR}\n"
+  mkdir ~/.vim/bundle
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+  printf "${RED}Cloning plugin manager..${NO_COLOR}\n"
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  printf "${GREEN}Done!${NO_COLOR}\n"
+  printf "${PURPLE}Open Vim and run ${CYAN}:PluginInstall${PURPLE} when setup finished.${NO_COLOR}\n"
+fi
+
+if [ ! -d ~/.vim/colors ]; then
+  printf "${RED}Creating colors directory..${NO_COLOR}\n"
+  mkdir ~/.vim/colors
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
+if [ ! -f ~/.vim/colors/onedark.vim ]; then
+  printf "${RED}Downloading color schene..${NO_COLOR}\n"
+  curl -o ~/.vim/colors/onedark.vim https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
