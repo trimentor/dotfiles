@@ -3,24 +3,10 @@ dotfiles
 
 A set of configuration files
 
-## .bashrc
+## Installation
 
-Add to `~/.bashrc`:
-
-```
-export EDITOR=vim
-```
-
-```
-export TERM="xterm-255color"
-```
-
-```
-export PATH=/home/user/tmux_configurations/:$PATH
-```
-
-```
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-```
+0. Run `git clone https://github.com/trimentor/dotfiles.git ~/`
+0. Run `~/dotfiles/scripts/compile-tmux.sh`
+0. Run `~/dotfiles/scripts/compile-vim.sh`
+0. Run `~/dotfiles/scripts/setup-vim.sh`
+0. Run `~/dotfiles/scripts/setup-aliases.sh`
