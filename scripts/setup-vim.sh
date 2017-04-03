@@ -40,3 +40,10 @@ if [ ! -f ~/.vim/colors/onedark.vim ]; then
   curl -o ~/.vim/colors/onedark.vim https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
+
+read -r -p "Use Vim as your default editor? (y/N) " use
+if [[ "$use" =~ ^(yes|y)$ ]]; then
+  printf "${RED}Updating bash configuration file..${NO_COLOR}\n"
+  cat ~/dotfiles/scripts/editor.txt >> ~/.bashrc
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
