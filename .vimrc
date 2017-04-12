@@ -92,23 +92,21 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
 
-" Original repos on GitHub
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rbenv'
-Plugin 'tpope/vim-markdown'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bogado/file-line'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'gregsexton/gitv'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'bogado/file-line'
-Plugin 'tpope/vim-unimpaired'
-" Version Control
 Plugin 'tpope/vim-fugitive'
-Plugin 'gregsexton/gitv'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rbenv'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on
