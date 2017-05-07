@@ -3,6 +3,20 @@ dotfiles
 
 A set of configuration files
 
+## Setup
+
+Make sure to install the following packages on a clean system:
+
+    sudo apt-get install -y build-essential dkms autotools-dev automake curl
+
+Install the following package before compiling *tmux*:
+
+    sudo apt-get install -y libevent-dev
+    
+Install the following package before compiling *Vim*:
+
+    sudo apt-get install -y libncurses5-dev
+
 ## Installation
 
 0. Inside your user's home directory, run `git clone https://github.com/trimentor/dotfiles.git`
