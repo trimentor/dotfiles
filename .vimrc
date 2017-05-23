@@ -97,12 +97,12 @@ Plugin 'gmarik/vundle'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bogado/file-line'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'epeli/slimux'
 Plugin 'gregsexton/gitv'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -122,12 +122,15 @@ imap <c-l> <space>=><space>
 noremap <c-d> obinding.pry<ESC>:w<CR>
 " }}}
 
-" RSpec {{{
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR> 
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!bundle exec rspec {spec}"
+" Slimux {{{
+" Send current line to the configured pane
+map <leader>l :SlimuxREPLSendLine<CR>
+" Send last visually selected text to the configured pane
+map <leader>e :SlimuxREPLSendSelection<CR>
+" Test current line
+map <leader>t :let @t=expand("%:p").':'.line(".")<CR>:SlimuxShellRun clear;be rspec <c-r>t<CR>
+" Run all specs in the current file
+map <leader>a :let @t=expand("%:p")<CR>:SlimuxShellRun clear; be rspec <c-r>t<CR>
 " }}}
 
 " CtrlP {{{
