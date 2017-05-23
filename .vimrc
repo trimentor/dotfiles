@@ -44,6 +44,8 @@ set splitright
 colors molokai
 set t_Co=256
 
+set synmaxcol=160 " Turn of syntax highlighting for long lines
+
 " Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
