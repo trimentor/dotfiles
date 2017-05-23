@@ -41,7 +41,7 @@ set splitright
 " }}}
 
 " Syntax highlighting {{{
-colors onedark " https://github.com/joshdick/onedark.vim
+colors molokai
 set t_Co=256
 
 " Switch syntax highlighting on, when the terminal has colors
