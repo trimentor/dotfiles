@@ -77,6 +77,13 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
 
+" File history {{{
+" Jump to the last known cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+" }}}
+
 " Mapleader {{{
 let mapleader=","
 " }}}
