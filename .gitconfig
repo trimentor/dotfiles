@@ -1,6 +1,10 @@
 [user]
   name = Kjel Delaey
   email = ""
+  signingkey = ""
+
+[gpg]
+  program = gpg2
 
 [pull]
   rebase = preserve
