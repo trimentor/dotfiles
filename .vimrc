@@ -109,6 +109,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rbenv'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'isRuslan/vim-es6'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 filetype plugin indent on
