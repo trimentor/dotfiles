@@ -41,7 +41,7 @@ set splitright
 " }}}
 
 " Syntax highlighting {{{
-colors molokai
+color dracula
 set t_Co=256
 
 set synmaxcol=160 " Turn of syntax highlighting for long lines

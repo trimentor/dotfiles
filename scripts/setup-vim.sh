@@ -37,7 +37,7 @@ if [ ! -d ~/.vim/colors ]; then
 fi
 if [ ! -f ~/.vim/colors/molokai.vim ]; then
   printf "${RED}Downloading color schene..${NO_COLOR}\n"
-  curl -o ~/.vim/colors/molokai.vim https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+  curl -o ~/.vim/colors/dracula.vim https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
 
