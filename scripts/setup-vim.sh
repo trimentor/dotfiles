@@ -35,7 +35,7 @@ if [ ! -d ~/.vim/colors ]; then
   mkdir ~/.vim/colors
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
-if [ ! -f ~/.vim/colors/molokai.vim ]; then
+if [ ! -f ~/.vim/colors/dracula.vim ]; then
   printf "${RED}Downloading color schene..${NO_COLOR}\n"
   curl -o ~/.vim/colors/dracula.vim https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
   printf "${GREEN}Done!${NO_COLOR}\n"
