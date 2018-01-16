@@ -137,6 +137,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'isRuslan/vim-es6'
 Plugin 'posva/vim-vue'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'ap/vim-css-color'
 
 call vundle#end()
 filetype plugin indent on
