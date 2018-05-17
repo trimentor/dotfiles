@@ -17,6 +17,11 @@ if [ ! -L ~/.vimrc ]; then
   ln -s ~/dotfiles/.vimrc ~/.vimrc
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
+if [ ! -d ~/.vim/ftplugin ]; then
+  printf "${RED}Linking file type plugin directory..${NO_COLOR}\n"
+  ln -s ~/dotfiles/.vim/ftplugin/ ~/.vim/ftplugin
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
 
 if [ ! -d ~/.vim/bundle ]; then
   printf "${RED}Creating plugin directory..${NO_COLOR}\n"
