@@ -38,6 +38,11 @@ set foldmethod=marker " Fold block of text surrounded by {{{ and }}}
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" Turn backup off
+set nobackup
+set nowb
+set noswapfile
 " }}}
 
 " Syntax highlighting {{{
