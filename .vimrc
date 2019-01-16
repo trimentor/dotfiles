@@ -243,7 +243,12 @@ map <Leader>gl :Glog<CR>
 map <Leader>gc :Gcommit<CR>
 " }}}
 
-" Filesystem navigation {{{
+" Nerd Tree {{{
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize=35
+
 " (Re)open NERDTree or close it
 map <Leader>n :NERDTreeToggle<CR>
+
+map <leader>nf :NERDTreeFind<cr>
 " }}}
