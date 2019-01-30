@@ -5,26 +5,32 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NO_COLOR='\033[0m'
 
-if [ ! -L ~/.gitattributes ]; then
+if [ ! -d ~/.config/git ]; then
+  printf "${RED}Creating git config directory..${NO_COLOR}\n"
+  mkdir -p ~/.config/git
+  printf "${GREEN}Done!${NO_COLOR}\n"
+fi
+
+if [ ! -L ~/.config/git/attributes ]; then
   printf "${RED}Linking gitattributes..${NO_COLOR}\n"
-  ln -s ~/dotfiles/.gitattributes ~/.gitattributes
+  ln -s ~/dotfiles/.gitattributes ~/.config/git/attributes
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
 
-if [ ! -L ~/.gitconfig ]; then
+if [ ! -L ~/.config/git/config ]; then
   printf "${RED}Linking gitconfig..${NO_COLOR}\n"
-  ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+  ln -s ~/dotfiles/.gitconfig ~/.config/git/config
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
 
-if [ ! -L ~/.gitignore ]; then
+if [ ! -L ~/.config/git/ignore ]; then
   printf "${RED}Linking gitignore..${NO_COLOR}\n"
-  ln -s ~/dotfiles/.gitignore ~/.gitignore
+  ln -s ~/dotfiles/.gitignore ~/.config/git/ignore
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
 
-if [ ! -L ~/.gitmessage ]; then
+if [ ! -L ~/.config/git/message ]; then
   printf "${RED}Linking gitmessage..${NO_COLOR}\n"
-  ln -s ~/dotfiles/.gitmessage ~/.gitmessage
+  ln -s ~/dotfiles/.gitmessage ~/.config/git/message
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
