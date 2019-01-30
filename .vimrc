@@ -46,9 +46,6 @@ set noswapfile
 " }}}
 
 " Syntax highlighting {{{
-color dracula
-set t_Co=256
-
 set synmaxcol=160 " Turn of syntax highlighting for long lines
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -123,6 +120,11 @@ call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'gmarik/vundle'
+
+" Colorschemes {{{
+Plugin 'joshdick/onedark.vim'
+Plugin 'tomasr/molokai'
+" }}}
 
 " CSS {{{
 " Preview colours in source code while editing
@@ -251,4 +253,9 @@ let g:NERDTreeWinSize=35
 map <Leader>n :NERDTreeToggle<CR>
 
 map <leader>nf :NERDTreeFind<cr>
+" }}}
+
+" Colors {{{
+colorscheme onedark
+set t_Co=256
 " }}}
