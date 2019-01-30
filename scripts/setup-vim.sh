@@ -35,17 +35,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   printf "${PURPLE}Open Vim and run ${CYAN}:PluginInstall${PURPLE} when setup finished.${NO_COLOR}\n"
 fi
 
-if [ ! -d ~/.vim/colors ]; then
-  printf "${RED}Creating colors directory..${NO_COLOR}\n"
-  mkdir ~/.vim/colors
-  printf "${GREEN}Done!${NO_COLOR}\n"
-fi
-if [ ! -f ~/.vim/colors/dracula.vim ]; then
-  printf "${RED}Downloading color schene..${NO_COLOR}\n"
-  curl -o ~/.vim/colors/dracula.vim https://raw.githubusercontent.com/dracula/vim/master/colors/dracula.vim
-  printf "${GREEN}Done!${NO_COLOR}\n"
-fi
-
 read -r -p "Use Vim as your default editor? (y/N) " use
 if [[ "$use" =~ ^(yes|y)$ ]]; then
   printf "${RED}Updating bash configuration file..${NO_COLOR}\n"
