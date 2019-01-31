@@ -7,15 +7,15 @@ A set of configuration files
 
 Make sure to install the following packages on a clean system:
 
-    sudo apt-get install -y build-essential dkms autotools-dev automake curl
+	sudo apt-get install -y build-essential dkms autotools-dev automake curl
 
 Install the following package before compiling *tmux*:
 
-    sudo apt-get install -y libevent-dev
-    
+	sudo apt-get install -y libevent-dev
+
 Install the following package before compiling *Vim*:
 
-    sudo apt-get install -y libncurses5-dev
+	sudo apt-get install -y libncurses5-dev
 
 ## Installation
 
