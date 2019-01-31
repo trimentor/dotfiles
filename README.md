@@ -17,6 +17,14 @@ Install the following package before compiling *Vim*:
 
 	sudo apt-get install -y libncurses5-dev
 
+Install *Ctags* (for navigating code like a pro):
+
+	sudo apt-get install -y exuberant-ctags
+
+Browse to your project's path and generate a *tags* file:
+
+	ctags .
+
 ## Installation
 
 0. Inside your user's home directory, run `git clone https://github.com/trimentor/dotfiles.git`
@@ -26,3 +34,4 @@ Install the following package before compiling *Vim*:
 0. Run `~/dotfiles/scripts/setup-vim.sh`
 0. Run `~/dotfiles/scripts/setup-aliases.sh`
 0. Run `~/dotfiles/scripts/setup-git.sh`
+0. Run `~/dotfiles/scripts/setup-ctags.sh`

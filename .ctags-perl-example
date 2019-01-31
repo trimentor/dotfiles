@@ -1,0 +1,9 @@
+--exclude=.git
+--extra=+q
+--langmap=perl:.pl.pm.t
+--recurse=yes
+--regex-perl=/^\s*has\s+['"]?([0-9a-zA-Z_]+)/\1/a,attribute/
+--regex-perl=/^\s*with\s+(['"])(.+)\1/\2/r,role/
+--regex-perl=/^\s*extends\s+(['"])(.+)\1/\2/e,extends/
+--regex-perl=/^\s*package\s+(.+)\s*;/\1/p,package/
+--tag-relative=yes
