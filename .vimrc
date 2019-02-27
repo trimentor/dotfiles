@@ -146,11 +146,11 @@ Plugin 'tpope/vim-fugitive'
 " Enable opening a file in a given line (vim index.html:20)
 Plugin 'bogado/file-line'
 
-" Auto-update ctags files
-Plugin 'craigemery/vim-autotag'
-
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'kien/ctrlp.vim'
+
+" Auto-update ctags files
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Add support for the ack search tool in Vim
 Plugin 'mileszs/ack.vim'
