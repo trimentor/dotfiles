@@ -122,6 +122,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Colorschemes {{{
+Plugin 'dracula/vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'tomasr/molokai'
 " }}}
@@ -264,6 +265,6 @@ map <leader>nf :NERDTreeFind<cr>
 " }}}
 
 " Colors {{{
-colorscheme onedark
+colorscheme dracula
 set t_Co=256
 " }}}
