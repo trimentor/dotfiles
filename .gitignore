@@ -13,3 +13,7 @@ tags.temp
 tmp/**/*
 !tmp/cache/.keep
 public/assets/*
+
+# Overcommit
+.overcommit.yml
+.git-hooks/
