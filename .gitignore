@@ -8,6 +8,8 @@ db/*.sqlite3
 log/*.log
 rerun.txt
 tags
+tags.lock
+tags.temp
 tmp/**/*
 !tmp/cache/.keep
 public/assets/*
