@@ -48,6 +48,11 @@ set noswapfile
 " Syntax highlighting {{{
 set synmaxcol=160 " Turn of syntax highlighting for long lines
 
+" Highlight the background in a subtle red for text that goes over the
+" 80 column limit.
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " Switch syntax highlighting on, when the terminal has colors
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
