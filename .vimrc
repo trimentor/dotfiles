@@ -147,6 +147,9 @@ Plugin 'tpope/vim-fugitive'
 " Enable opening a file in a given line (vim index.html:20)
 Plugin 'bogado/file-line'
 
+" Asynchronous Lint Engine
+Plugin 'dense-analysis/ale'
+
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'kien/ctrlp.vim'
 
