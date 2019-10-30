@@ -164,6 +164,9 @@ Plugin 'severin-lemaignan/vim-minimap'
 " for reading or editing, and perform basic file system operations.
 Plugin 'scrooloose/nerdtree'
 
+" Helpers for UNIX
+Plugin 'tpope/vim-eunuch'
+
 " Pairs of handy bracket mappings
 Plugin 'tpope/vim-unimpaired'
 
