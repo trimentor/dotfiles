@@ -175,6 +175,9 @@ Plugin 'severin-lemaignan/vim-minimap'
 " for reading or editing, and perform basic file system operations.
 Plugin 'scrooloose/nerdtree'
 
+" Comment stuff out
+Plugin 'tpope/vim-commentary'
+
 " Helpers for UNIX
 Plugin 'tpope/vim-eunuch'
 
