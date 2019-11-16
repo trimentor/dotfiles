@@ -155,6 +155,9 @@ Plugin 'bogado/file-line'
 " Asynchronous Lint Engine
 Plugin 'dense-analysis/ale'
 
+" Insert or delete brackets, parens, quotes in pair
+Plugin 'jiangmiao/auto-pairs'
+
 " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'kien/ctrlp.vim'
 
