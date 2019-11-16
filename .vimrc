@@ -209,6 +209,12 @@ Plugin 'tpope/vim-markdown'
 Plugin 'vim-perl/vim-perl'
 " }}}
 
+" Python {{{
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
+" }}}
+
 " Rails {{{
 " Turns Vim into a Ruby on Rails editor
 Plugin 'tpope/vim-rails'
@@ -232,6 +238,10 @@ filetype plugin indent on
 " Ctags {{{
 " Use Ctrl+b for jumping to source code
 noremap <c-b> g<c-]>
+" }}}
+
+" Python {{{
+let python_highlight_all=1
 " }}}
 
 " Ruby {{{
