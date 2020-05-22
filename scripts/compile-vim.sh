@@ -7,7 +7,7 @@ cd vim/
 latesttag=$(git describe --tags)
 git checkout ${latesttag}
 
-./configure --with-features=HUGE --enable-perlinterp --enable-pythoninterp --enable-rubyinterp
+./configure --with-features=HUGE --enable-luainterp --enable-perlinterp --enable-pythoninterp --enable-rubyinterp
 make
 sudo make install
 
