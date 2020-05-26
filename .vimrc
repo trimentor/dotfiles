@@ -248,8 +248,8 @@ let python_highlight_all=1
 " Ctrl+l to write '=>'
 imap <c-l> <space>=><space>
 
-" Ctrl+d to jump to the next line and write 'binding.pry'
-noremap <c-d> obinding.pry<ESC>:w<CR>
+" Ctrl+d to jump to the next line and write 'byebug'
+noremap <c-d> obyebug<ESC>:w<CR>
 " }}}
 
 " Slimux {{{
