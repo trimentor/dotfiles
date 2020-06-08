@@ -127,6 +127,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Colorschemes {{{
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'tomasr/molokai'
@@ -292,6 +293,8 @@ map <leader>nf :NERDTreeFind<cr>
 " }}}
 
 " Colors {{{
-colorscheme dracula
+set background=light
 set t_Co=256
+let g:solarized_termcolors=256
+colorscheme solarized
 " }}}
