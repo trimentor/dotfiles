@@ -11,7 +11,7 @@ Make sure to install the following packages on a clean system:
 
 Install the following package before compiling *tmux*:
 
-	sudo apt-get install -y libevent-dev
+	sudo apt-get install -y bison libevent-dev
 
 Install the following package before compiling *Vim*:
 
