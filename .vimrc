@@ -124,13 +124,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Colorschemes {{{
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'dracula/vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'tomasr/molokai'
 " }}}
 
 " CSS {{{
@@ -141,10 +138,6 @@ Plugin 'ap/vim-css-color'
 " Git {{{
 " Show which lines have been added, modified, or removed
 Plugin 'airblade/vim-gitgutter'
-" Gitv, a wrapper around git log --graph, allows you to view commits, diffstats,
-" inline diffs, and file or folder specific history, and more.
-" It is an extension of the fugitive git plugin.
-Plugin 'gregsexton/gitv'
 " The best Git wrapper of all time :-)
 Plugin 'tpope/vim-fugitive'
 " }}}
@@ -165,12 +158,6 @@ Plugin 'kien/ctrlp.vim'
 " Auto-update ctags files
 Plugin 'ludovicchabant/vim-gutentags'
 
-" Add support for the ack search tool in Vim
-Plugin 'mileszs/ack.vim'
-
-" A Sublime-like minimap for Vim
-Plugin 'severin-lemaignan/vim-minimap'
-
 " NERDTree is a file system explorer for the Vim editor.
 " Users can visually browse complex directory hierarchies, quickly open files
 " for reading or editing, and perform basic file system operations.
@@ -179,30 +166,8 @@ Plugin 'scrooloose/nerdtree'
 " Comment stuff out
 Plugin 'tpope/vim-commentary'
 
-" Helpers for UNIX
-Plugin 'tpope/vim-eunuch'
-
-" Pairs of handy bracket mappings
-Plugin 'tpope/vim-unimpaired'
-
 " Lean & mean status/tabline for Vim
 Plugin 'vim-airline/vim-airline'
-" }}}
-
-" JavaScript {{{
-" Syntax highlighting for JavaScript ES6
-Plugin 'isRuslan/vim-es6'
-" Syntax highlighting and more for CoffeeScript
-Plugin 'kchmck/vim-coffee-script'
-" Syntax Highlight for Vue.js components
-Plugin 'posva/vim-vue'
-" }}}
-
-" Markdown {{{
-" Syntax highlighting for Github Markdown
-Plugin 'jtratner/vim-flavored-markdown'
-" Syntax highlighting and filetype plugins for Markdown
-Plugin 'tpope/vim-markdown'
 " }}}
 
 " Perl {{{
@@ -219,8 +184,6 @@ Plugin 'vim-syntastic/syntastic'
 " Rails {{{
 " Turns Vim into a Ruby on Rails editor
 Plugin 'tpope/vim-rails'
-" Provides a :Rbenv command that wraps !rbenv with tab completion
-Plugin 'tpope/vim-rbenv'
 " Provides easy navigation and syntax highlighting in ruby
 Plugin 'vim-ruby/vim-ruby'
 " }}}
