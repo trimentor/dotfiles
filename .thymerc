@@ -1,0 +1,15 @@
+set :timer, 25*60
+set :timer_break, 5*60
+set :warning, 5*60
+set :warning_color, "red,bold"
+set :interval, 1
+set :tmux, true
+set :tmux_theme, "#[fg=mycolor,bg=mycolor]#[fg=%s]%s#[fg=mycolor,bg=mycolor]"
+
+after do |seconds_left|
+  `notify-send -u critical "Pomodoro timer finished. Take a short break!"` if seconds_left == 0
+end
+
+after do |seconds_left|
+  `vlc /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga`
+end

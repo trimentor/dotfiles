@@ -1,0 +1,8 @@
+!! No Caps Lock
+clear lock
+
+!! Make Caps Lock an escape key
+keycode 0x42 = Escape
+
+!! Make cmd (on Logitech Tablet Keyboard for iPad) an escape key
+keycode 133 = Escape

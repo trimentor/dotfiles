@@ -1,0 +1,6 @@
+alias chrome='chromium --disable-gpu'
+alias log='tail -f'
+alias ls5='ls -1t | head -5'
+alias msedge='microsoft-edge-beta --disable-gpu'
+alias v='vim'
+alias vscode='code --disable-gpu'

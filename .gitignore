@@ -1,0 +1,19 @@
+.rvmrc
+.bundle
+.idea/
+.sass-cache/
+*.pyc
+*.sw*
+db/*.sqlite3
+log/*.log
+rerun.txt
+tags
+tags.lock
+tags.temp
+tmp/**/*
+!tmp/cache/.keep
+public/assets/*
+
+# Overcommit
+.overcommit.yml
+.git-hooks/

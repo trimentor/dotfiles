@@ -1,0 +1,55 @@
+[alias]
+  am = commit --amend
+  bra = branch -a
+  brr = branch -r
+  co = checkout
+  count = shortlog -sn
+  lg = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  new-start = !git reset $(git commit-tree HEAD^{tree} -m "A new start")
+  rbr = branch -D
+  rh = reset --hard
+  rs = reset --soft
+  sq = rebase --interactive origin/master --autosquash
+  st = status -sb
+  tidy-up = !sh -c 'git remote prune origin && git gc --prune=now && git gc --aggressive && git tag -l | xargs git tag -d && git fetch --tags'
+  tr = checkout --track
+  up = !git fetch && git pull && git fetch --tags
+  wc = !git whatchanged -p --abbrev-commit --pretty=medium
+
+[color]
+  branch = auto
+  diff = auto
+  grep = always
+  interactive = auto
+  status = auto
+  ui = auto
+
+[commit]
+  template = ~/.config/git/message
+
+[core]
+  editor = vim
+
+[diff]
+  algorithm = patience
+
+[grep]
+  lineNumber = true
+
+[merge]
+  ff = false
+  log = true
+
+[mergetool]
+  keepBackup = false
+  keepTemporaries = false
+
+[pull]
+  rebase = merges
+
+[push]
+  default = upstream
+
+[user]
+  email = "213738+trimentor@users.noreply.github.com"
+  name = Kjel Delaey

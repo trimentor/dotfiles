@@ -1,0 +1,31 @@
+name=
+project_dir=
+
+tmux has-session -t ${name}
+if [ $? != 0 ]
+then
+  tmux new-session -s ${name} -n editor -d
+  tmux new-window -n console -t ${name}
+  tmux split-window
+  tmux split-window
+  tmux select-pane -t 1
+  tmux split-window -h
+  tmux select-pane -t 1
+  tmux split-window
+  tmux select-pane -t 1
+  tmux new-window -n docker -t ${name}
+  tmux new-window -n other -t ${name}
+
+  tmux send-keys -t ${name}:1.1 "cd ${project_dir}/project1 && clear && vim" C-m
+  tmux send-keys -t ${name}:2.1 "cd ${project_dir}/project1 && clear && puma -p 3000 -w 2" C-m
+  tmux send-keys -t ${name}:2.2 "cd ${project_dir}/project1 && clear && bundle exec sidekiq" C-m
+  tmux send-keys -t ${name}:2.3 "cd ${project_dir}/project1 && clear && tail -f log/development.log" C-m
+  tmux send-keys -t ${name}:2.4 "cd ${project_dir}/project2 && clear && ./bin/rails s" C-m
+  tmux send-keys -t ${name}:2.5 "cd ${project_dir}/project2 && clear && bundle exec sidekiq" C-m
+  tmux send-keys -t ${name}:3.1 "cd ${project_dir}/docker && docker-compose up" C-m
+  tmux send-keys -t ${name}:4.1 "cd ${project_dir}/other && clear" C-m
+
+  tmux select-window -t ${name}:1
+
+  tmux attach -t ${name}
+fi
