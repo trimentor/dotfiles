@@ -118,90 +118,83 @@ noremap <leader>W :w !sudo tee %<CR>
 " }}}
 
 " Plugins {{{
-" Configure Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 " Colorschemes {{{
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " }}}
 
 " CSS {{{
 " Preview colours in source code while editing
-Plugin 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 " }}}
 
 " Git {{{
 " Show which lines have been added, modified, or removed
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " The best Git wrapper of all time :-)
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " }}}
 "
 " IDE {{{
 " Enable opening a file in a given line (vim index.html:20)
-Plugin 'bogado/file-line'
+Plug 'bogado/file-line'
 
 " Asynchronous Lint Engine
-Plugin 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " Insert or delete brackets, parens, quotes in pair
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " Fuzzy file, buffer, mru, tag, etc finder
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " Auto-update ctags files
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " NERDTree is a file system explorer for the Vim editor.
 " Users can visually browse complex directory hierarchies, quickly open files
 " for reading or editing, and perform basic file system operations.
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Comment stuff out
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Lean & mean status/tabline for Vim
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 " }}}
 
 " Perl {{{
 " Enable support for Perl 5 and Perl 6 in Vim
-Plugin 'vim-perl/vim-perl'
+Plug 'vim-perl/vim-perl'
 " }}}
 
 " Python {{{
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
+Plug 'nvie/vim-flake8'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-syntastic/syntastic'
 " }}}
 
 " Rails {{{
 " Turns Vim into a Ruby on Rails editor
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 " Provides easy navigation and syntax highlighting in ruby
-Plugin 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 " }}}
 
 " Ruby {{{
 " Help to end certain Ruby structures automatically
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 " }}}
 
 " Tmux {{{
 " Seamless navigation between tmux panes and Vim splits
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 " A SLIME inspired tmux integration plugin
-Plugin 'epeli/slimux'
+Plug 'epeli/slimux'
 " }}}
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 " }}}
 
 " Ctags {{{
