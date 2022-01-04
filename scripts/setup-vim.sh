@@ -23,16 +23,11 @@ if [ ! -d ~/.vim/ftplugin ]; then
   printf "${GREEN}Done!${NO_COLOR}\n"
 fi
 
-if [ ! -d ~/.vim/bundle ]; then
-  printf "${RED}Creating plugin directory..${NO_COLOR}\n"
-  mkdir ~/.vim/bundle
+if [ ! -d ~/.vim/autoload/plug.vim ]; then
+  printf "${RED}Downloading plugin manager..${NO_COLOR}\n"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   printf "${GREEN}Done!${NO_COLOR}\n"
-fi
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-  printf "${RED}Cloning plugin manager..${NO_COLOR}\n"
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  printf "${GREEN}Done!${NO_COLOR}\n"
-  printf "${PURPLE}Open Vim and run ${CYAN}:PluginInstall${PURPLE} when setup finished.${NO_COLOR}\n"
+  printf "${PURPLE}Open Vim and run ${CYAN}:PlugInstall${PURPLE} when setup finished.${NO_COLOR}\n"
 fi
 
 read -r -p "Use Vim as your default editor? (y/N) " use
