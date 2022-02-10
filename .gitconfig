@@ -1,5 +1,6 @@
 [alias]
   am = commit --amend
+  br = branch
   bra = branch -a
   brr = branch -r
   co = checkout
